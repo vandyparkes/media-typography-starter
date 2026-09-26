@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" role="img" aria-labelledby="title desc">
+  <title id="title">Leaf icon</title>
+  <desc id="desc">A simple leaf shape inside a circle.</desc>
+  <circle cx="24" cy="24" r="22" fill="#ffc627"/>
+  <path d="M14 28c12 1 20-6 20-16 0 0-16 1-20 16Z" fill="#8c1d40"/>
+  <path d="M16 30c6-4 11-8 16-16" fill="none" stroke="#ffffff" stroke-width="3" stroke-linecap="round"/>
+</svg>

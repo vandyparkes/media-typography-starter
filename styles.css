@@ -1,0 +1,145 @@
+@layer reset, base, layout, components, utilities;
+
+@layer reset {
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+
+  body {
+    margin: 0;
+  }
+}
+
+@layer base {
+  :root {
+    --color-text: #191919;
+    --color-surface: #ffffff;
+    --color-muted: #f7f7f7;
+    --color-accent: #8c1d40;
+    --color-gold: #ffc627;
+    --font-body: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    --step-0: 1rem;
+    --step-2: 1.5rem;
+    --step-4: 2.5rem;
+    --measure: 68ch;
+    --space-4: 1rem;
+    --space-6: 1.5rem;
+    --space-8: 2rem;
+  }
+
+  body {
+    color: var(--color-text);
+    background: var(--color-surface);
+    font-family: var(--font-body);
+    font-size: var(--step-0);
+    line-height: 1.5;
+  }
+
+  img,
+  svg,
+  video {
+    max-inline-size: 100%;
+    block-size: auto;
+  }
+
+  h1,
+  h2,
+  h3 {
+    line-height: 1.1;
+  }
+}
+
+@layer layout {
+  main {
+    inline-size: min(100% - 2rem, 72rem);
+    margin-inline: auto;
+  }
+
+  .hero {
+    display: grid;
+    gap: var(--space-6);
+    padding-block: var(--space-8);
+  }
+
+  .section {
+    padding-block: var(--space-8);
+  }
+
+  .card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(18rem, 100%), 1fr));
+    gap: var(--space-4);
+  }
+
+  @media (min-width: 56rem) {
+    .hero {
+      grid-template-columns: 1fr 1fr;
+      align-items: center;
+    }
+  }
+}
+
+@layer components {
+  .site-header {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-4);
+    justify-content: space-between;
+    padding: var(--space-4);
+    background: var(--color-muted);
+  }
+
+  .nav-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-4);
+    padding: 0;
+    margin: 0;
+    list-style: none;
+  }
+
+  .hero-media {
+    margin: 0;
+  }
+
+  .hero-media img,
+  .placeholder-image {
+    aspect-ratio: 3 / 2;
+    border-radius: .5rem;
+  }
+
+  .hero-media img {
+    object-fit: cover;
+  }
+
+  .placeholder-image {
+    background:
+      linear-gradient(135deg, rgb(140 29 64 / .85), rgb(255 198 39 / .85)),
+      repeating-linear-gradient(45deg, #f7f7f7 0 12px, #ffffff 12px 24px);
+    border: 1px solid #d0d0d0;
+  }
+
+  .section-heading {
+    display: flex;
+    gap: var(--space-4);
+    align-items: start;
+    max-inline-size: var(--measure);
+  }
+
+  .card,
+  .media-check {
+    padding: var(--space-4);
+    border: 1px solid #d0d0d0;
+    border-radius: .5rem;
+    background: var(--color-surface);
+  }
+}
+
+@layer utilities {
+  .eyebrow {
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+}
