@@ -1,0 +1,1 @@
+AI was used for syntax, the narrow, wide, zoom, and slow-network checks, and the alt-text decision. No source or license was added. The icon alt is empty. No photo alt was set, because there is no photo file.
