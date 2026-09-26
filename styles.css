@@ -115,6 +115,7 @@
   }
 
   .placeholder-image {
+    inline-size: 100%;
     background:
       linear-gradient(135deg, rgb(140 29 64 / .85), rgb(255 198 39 / .85)),
       repeating-linear-gradient(45deg, #f7f7f7 0 12px, #ffffff 12px 24px);
@@ -126,6 +127,18 @@
     gap: var(--space-4);
     align-items: start;
     max-inline-size: var(--measure);
+  }
+
+  .section-icon {
+    aspect-ratio: 1;
+  }
+
+  .media-frame {
+    inline-size: 100%;
+    aspect-ratio: 16 / 9;
+    margin-block-end: var(--space-4);
+    background: var(--color-muted);
+    border-radius: .5rem;
   }
 
   .card,
